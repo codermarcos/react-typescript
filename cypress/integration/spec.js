@@ -4,24 +4,24 @@
 
 describe('App test example', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
-  })
+    cy.visit('http://localhost:3000/');
+  });
 
   it(
     'Show correct title',
     () => {
       cy.document()
         .title()
-        .should('include', 'Home')
-    }
-  )
+        .should('include', 'Search | Cep');
+    },
+  );
 
   it(
     'Show correct description',
     () => {
       cy.document()
         .get('meta[name="description"]')
-        .should('have.attr', 'content', 'Home description')
-    }
+        .should('have.attr', 'content', 'Search cep decription');
+    },
   );
-})
+});

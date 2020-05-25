@@ -1,4 +1,3 @@
-import { routerActions } from 'connected-react-router';
 import { connect, ConnectedProps } from 'react-redux';
 import { CepActionType } from 'src/store/cep/types';
 import { RootState } from 'src/store';
@@ -9,7 +8,6 @@ const mapState = (state: RootState) => ({
 
 const mapDispatch = {
   searchCep: (cep: string) => ({ type: CepActionType.fetch, cep }),
-  ...routerActions,
 };
 
 const connector = connect(mapState, mapDispatch);

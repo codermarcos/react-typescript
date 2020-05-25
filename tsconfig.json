@@ -22,6 +22,9 @@
   },
   "include": [
     "src",
-    "./rewired.js"
+    "**/**/*.js"
   ],
+  "exclude": [
+    "cypress"
+  ]
 }

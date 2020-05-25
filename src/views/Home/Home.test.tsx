@@ -1,9 +1,25 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import Home from './Home';
+import renderer from 'react-test-renderer';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<Home />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+import Home from 'src/views/Home/Home';
+import { CepActionType } from 'src/store/cep/types';
+import { PropsFromRedux } from 'src/views/Home/Home.connect';
+
+describe(
+  `component: ${Home.name}`,
+  () => {
+    const props: PropsFromRedux = {
+      searchCep(cep: string) {
+        return { type: CepActionType.fetch, cep };
+      },
+    };
+
+    test(
+      'renders correctly',
+      () => {
+        const tree = renderer.create(<Home {...props} />).toJSON();
+        expect(tree).toMatchSnapshot();
+      },
+    );
+  },
+);

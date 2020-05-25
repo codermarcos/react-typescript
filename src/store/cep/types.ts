@@ -19,7 +19,6 @@ export enum CepActionType {
   save = 'save',
 }
 
-
 export interface FetchCepAction {
   type: CepActionType.fetch;
   cep: string;

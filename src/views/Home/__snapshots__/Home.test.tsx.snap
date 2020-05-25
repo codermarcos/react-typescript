@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component: Home renders correctly 1`] = `
+<main>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      defaultValue=""
+      onInput={[Function]}
+      type="text"
+    />
+    <button
+      type="submit"
+    >
+      search
+    </button>
+  </form>
+</main>
+`;
