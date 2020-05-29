@@ -36,9 +36,11 @@
     "unfetch": "^4.1.0"
   },
   "scripts": {
+    "ci:e2e": "start-server-and-test 'npm run serve:build' 8080 'cypress run'",
+    "serve:build": "http-server ./build -c-1 --silent",
     "lint": "eslint src/**/*.ts src/**/*.tsx --fix",
-    "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "start": "react-app-rewired start",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "coverage": "nyc npm run test",
@@ -75,7 +77,9 @@
         "always",
         {
           "line": {
-            "markers": ["/"]
+            "markers": [
+              "/"
+            ]
           }
         }
       ],
@@ -114,8 +118,10 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "http-server": "^0.12.3",
     "react-app-rewired": "^2.1.5",
     "react-snap": "^1.23.0",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.13.1",
+    "start-server-and-test": "^1.11.0"
   }
 }
