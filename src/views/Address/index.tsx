@@ -11,7 +11,7 @@ export default (props: RouteProps): JSX.Element => (
   <Route {...props}>
     <Helmet>
       <title>Address | Cep</title>
-      <meta name="description" content="Welcome cruiser" />
+      <meta name="description" content="Cep address decription" />
     </Helmet>
     <Connected />
   </Route>

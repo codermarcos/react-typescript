@@ -20,7 +20,7 @@ const app = (
       <ConnectedRouter history={history} context={ReactReduxContext}>
         <Switch>
           <Home path="/" exact />
-          <Address path="/:cep" exact />
+          <Address path="/cep/:cep" exact />
         </Switch>
       </ConnectedRouter>
     </Provider>
