@@ -2,6 +2,7 @@
   "name": "react-typescript",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://codermarcos.github.io/react-typescript/",
   "config-overrides-path": "./rewired.js",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
