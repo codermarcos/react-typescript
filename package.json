@@ -48,7 +48,12 @@
     "postbuild": "react-snap"
   },
   "reactSnap": {
-    "inlineCss": true
+    "inlineCss": true,
+    "publicPath": "/react-typescript",
+    "include": [
+      "/search",
+      "/address"
+    ]
   },
   "eslintConfig": {
     "env": {

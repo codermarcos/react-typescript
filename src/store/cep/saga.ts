@@ -12,7 +12,7 @@ function* searchCep(action: FetchCepAction) {
 
     const page = yield select((state: RootState) => state.router.location.pathname);
 
-    if (!page || page === '/') yield put(push(action.cep));
+    if (!page || page === '/search') yield put(push(`address?cep=${action.cep}`));
   } catch (error) {
     console.log(error);
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import 'src/views/Address/Address.css';
 
@@ -18,7 +18,7 @@ function Address(props: PropsFromRedux) {
     );
   }
 
-  const { cep } = useParams();
+  const cep = new URLSearchParams(useLocation().search).get('cep');
 
   if (!cep) return html = <main>Cep não encontrado</main>;
 

@@ -1,7 +1,7 @@
 import 'unfetch/polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Switch } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
 import { Provider, ReactReduxContext } from 'react-redux';
 
@@ -19,8 +19,9 @@ const app = (
     <Provider store={store} context={ReactReduxContext}>
       <ConnectedRouter history={history} context={ReactReduxContext}>
         <Switch>
-          <Home path="/" exact />
-          <Address path="/cep/:cep" exact />
+          <Home path="/search" exact />
+          <Address path="/address" exact />
+          <Route path="*" render={() => <Redirect to="/search" />} />
         </Switch>
       </ConnectedRouter>
     </Provider>
