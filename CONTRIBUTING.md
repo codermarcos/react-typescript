@@ -1,4 +1,4 @@
-# Contributing to Band-aid
+# Contributing to react-typescript
 
 :bulb::tada: First off, thanks for taking the time to contribute! :tada::bulb:
 
